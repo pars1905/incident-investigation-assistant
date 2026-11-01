@@ -18,7 +18,7 @@ To try a model-written reviewer explanation, set `OPENAI_API_KEY` and `OPENAI_MO
 
 ## 100-case evaluation
 
-`data/incidents_100.json` contains 25 hand-specified scenario variants for each of three causes and 25 cases without sufficient evidence. The labels come from the scenario design, not independently adjudicated production incidents; many examples reuse phrase templates. This set is useful for exposing known gaps but cannot establish real-world accuracy. Run `python3 evaluate.py`. Current results: 15/25 detected in each of the three cause groups, 25/25 correct abstentions, and 100/100 source references pointing to supplied records. The ten missed cases per cause use wording outside the narrow rule vocabulary. Do not report these figures as production performance.
+`data/incidents_100.json` contains 25 generated synthetic examples for each of three causes and 25 cases without sufficient evidence. The labels come from the scenario templates, not independently adjudicated production incidents; many examples reuse phrase templates. This set is useful for exposing known gaps but cannot establish real-world accuracy. Run `python3 evaluate.py`. Current results: 15/25 detected in each of the three cause groups, 25/25 correct abstentions, and 100/100 source references pointing to supplied records. The ten missed cases per cause use wording outside the narrow rule vocabulary. Do not report these figures as production performance.
 
 ## Read real GitHub deployment data
 
