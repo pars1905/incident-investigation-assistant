@@ -34,3 +34,27 @@ def get_deployments(owner, repo, service, opener=None):
         raise ValueError("Unexpected GitHub deployment response")
     return [{"id": str(record["id"]), "service": service, "at": record["created_at"],
              "source_url": f"https://github.com/{owner}/{repo}/deployments"} for record in records]
+
+
+def get_workflow_runs(owner, repo, opener=None):
+    """Read recent GitHub Actions runs as operational context, not root causes."""
+    if not all(SLUG.fullmatch(value) for value in (owner, repo)):
+        raise ValueError("Owner and repository must be simple GitHub names")
+    url = f"https://api.github.com/repos/{owner}/{repo}/actions/runs?per_page=30"
+    headers = {"Accept": "application/vnd.github+json", "User-Agent": "incident-portfolio-demo"}
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    request = urllib.request.Request(url, headers=headers)
+    try:
+        with (opener or urllib.request.urlopen)(request, timeout=10) as response:
+            result = json.load(response)
+    except urllib.error.HTTPError as error:
+        raise RuntimeError(f"GitHub API returned HTTP {error.code}") from error
+    records = result.get("workflow_runs") if isinstance(result, dict) else None
+    if not isinstance(records, list):
+        raise ValueError("Unexpected GitHub workflow response")
+    return [{"id": str(record["id"]), "name": record["name"],
+             "status": record["status"], "conclusion": record.get("conclusion"),
+             "at": record["created_at"], "source_url": record["html_url"]}
+            for record in records]
