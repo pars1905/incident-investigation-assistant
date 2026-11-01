@@ -2,7 +2,7 @@ import json
 import argparse
 from datetime import datetime, timezone
 from app import create_issue, investigate
-from github_source import get_deployments
+from github_source import get_deployments, get_workflow_runs
 
 ALERT = {"id": "INC-17", "service": "checkout", "at": "2026-01-10T12:00:00Z"}
 LOGS = [
@@ -13,7 +13,8 @@ DEPLOYS = [{"id": "D-31", "service": "checkout", "at": "2026-01-10T11:45:00Z"}]
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--github", metavar="OWNER/REPO", help="Read recent deployment records")
+    parser.add_argument("--github", metavar="OWNER/REPO", help="Read recent GitHub Actions runs")
+    parser.add_argument("--deployments", action="store_true", help="Read deployment records instead")
     parser.add_argument("--service", default="checkout", help="Service represented by that repository")
     parser.add_argument("--ai", action="store_true", help="Optional model-written explanation")
     args = parser.parse_args()
@@ -24,9 +25,15 @@ if __name__ == "__main__":
             parser.error("--github must be OWNER/REPO")
         alert = {"id": "LIVE-READONLY", "service": args.service,
                  "at": datetime.now(timezone.utc).isoformat()}
-        deployments = get_deployments(owner, repo, args.service)
-        report = investigate(alert, [], deployments)
-        print(json.dumps({"deployments_read": len(deployments)}, indent=2))
+        if args.deployments:
+            deployments = get_deployments(owner, repo, args.service)
+            report = investigate(alert, [], deployments)
+            print(json.dumps({"deployments_read": len(deployments)}, indent=2))
+        else:
+            runs = get_workflow_runs(owner, repo)
+            report = investigate(alert, [], [])
+            report["workflow_context"] = runs[:5]
+            print(json.dumps({"workflow_runs_read": len(runs)}, indent=2))
     else:
         report = investigate(ALERT, LOGS, DEPLOYS)
     print(json.dumps(report, indent=2))
