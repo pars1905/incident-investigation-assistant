@@ -1,0 +1,1928 @@
+[
+  {
+    "id": "INC-001",
+    "alert": {
+      "id": "INC-001",
+      "service": "checkout",
+      "at": "2026-10-01T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-001",
+        "at": "2026-10-01T11:58:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-001",
+        "service": "checkout",
+        "at": "2026-10-01T11:40:00Z"
+      }
+    ],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-002",
+    "alert": {
+      "id": "INC-002",
+      "service": "checkout",
+      "at": "2026-10-02T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-002",
+        "at": "2026-10-02T11:57:00Z",
+        "message": "too many connections"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-003",
+    "alert": {
+      "id": "INC-003",
+      "service": "checkout",
+      "at": "2026-10-03T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-003",
+        "at": "2026-10-03T11:56:00Z",
+        "message": "database unavailable"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-004",
+    "alert": {
+      "id": "INC-004",
+      "service": "checkout",
+      "at": "2026-10-04T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-004",
+        "at": "2026-10-04T11:55:00Z",
+        "message": "DB pool exhausted"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-005",
+    "alert": {
+      "id": "INC-005",
+      "service": "checkout",
+      "at": "2026-10-05T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-005",
+        "at": "2026-10-05T11:54:00Z",
+        "message": "could not connect to postgres"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-005",
+        "service": "checkout",
+        "at": "2026-10-05T11:40:00Z"
+      }
+    ],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-006",
+    "alert": {
+      "id": "INC-006",
+      "service": "checkout",
+      "at": "2026-10-06T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-006",
+        "at": "2026-10-06T11:53:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-007",
+    "alert": {
+      "id": "INC-007",
+      "service": "checkout",
+      "at": "2026-10-07T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-007",
+        "at": "2026-10-07T11:52:00Z",
+        "message": "too many connections"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-008",
+    "alert": {
+      "id": "INC-008",
+      "service": "checkout",
+      "at": "2026-10-08T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-008",
+        "at": "2026-10-08T11:51:00Z",
+        "message": "database unavailable"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-009",
+    "alert": {
+      "id": "INC-009",
+      "service": "checkout",
+      "at": "2026-10-09T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-009",
+        "at": "2026-10-09T11:50:00Z",
+        "message": "DB pool exhausted"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-009",
+        "service": "checkout",
+        "at": "2026-10-09T11:40:00Z"
+      }
+    ],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-010",
+    "alert": {
+      "id": "INC-010",
+      "service": "checkout",
+      "at": "2026-10-10T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-010",
+        "at": "2026-10-10T11:49:00Z",
+        "message": "could not connect to postgres"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-011",
+    "alert": {
+      "id": "INC-011",
+      "service": "checkout",
+      "at": "2026-10-11T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-011",
+        "at": "2026-10-11T11:48:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-012",
+    "alert": {
+      "id": "INC-012",
+      "service": "checkout",
+      "at": "2026-10-12T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-012",
+        "at": "2026-10-12T11:47:00Z",
+        "message": "too many connections"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-013",
+    "alert": {
+      "id": "INC-013",
+      "service": "checkout",
+      "at": "2026-10-13T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-013",
+        "at": "2026-10-13T11:58:00Z",
+        "message": "database unavailable"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-013",
+        "service": "checkout",
+        "at": "2026-10-13T11:40:00Z"
+      }
+    ],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-014",
+    "alert": {
+      "id": "INC-014",
+      "service": "checkout",
+      "at": "2026-10-14T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-014",
+        "at": "2026-10-14T11:57:00Z",
+        "message": "DB pool exhausted"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-015",
+    "alert": {
+      "id": "INC-015",
+      "service": "checkout",
+      "at": "2026-10-15T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-015",
+        "at": "2026-10-15T11:56:00Z",
+        "message": "could not connect to postgres"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-016",
+    "alert": {
+      "id": "INC-016",
+      "service": "checkout",
+      "at": "2026-10-16T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-016",
+        "at": "2026-10-16T11:55:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-017",
+    "alert": {
+      "id": "INC-017",
+      "service": "checkout",
+      "at": "2026-10-17T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-017",
+        "at": "2026-10-17T11:54:00Z",
+        "message": "too many connections"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-017",
+        "service": "checkout",
+        "at": "2026-10-17T11:40:00Z"
+      }
+    ],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-018",
+    "alert": {
+      "id": "INC-018",
+      "service": "checkout",
+      "at": "2026-10-18T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-018",
+        "at": "2026-10-18T11:53:00Z",
+        "message": "database unavailable"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-019",
+    "alert": {
+      "id": "INC-019",
+      "service": "checkout",
+      "at": "2026-10-19T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-019",
+        "at": "2026-10-19T11:52:00Z",
+        "message": "DB pool exhausted"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-020",
+    "alert": {
+      "id": "INC-020",
+      "service": "checkout",
+      "at": "2026-10-20T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-020",
+        "at": "2026-10-20T11:51:00Z",
+        "message": "could not connect to postgres"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-021",
+    "alert": {
+      "id": "INC-021",
+      "service": "checkout",
+      "at": "2026-10-21T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-021",
+        "at": "2026-10-21T11:50:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-021",
+        "service": "checkout",
+        "at": "2026-10-21T11:40:00Z"
+      }
+    ],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-022",
+    "alert": {
+      "id": "INC-022",
+      "service": "checkout",
+      "at": "2026-10-22T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-022",
+        "at": "2026-10-22T11:49:00Z",
+        "message": "too many connections"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-023",
+    "alert": {
+      "id": "INC-023",
+      "service": "checkout",
+      "at": "2026-10-23T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-023",
+        "at": "2026-10-23T11:48:00Z",
+        "message": "database unavailable"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-024",
+    "alert": {
+      "id": "INC-024",
+      "service": "checkout",
+      "at": "2026-10-24T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-024",
+        "at": "2026-10-24T11:47:00Z",
+        "message": "DB pool exhausted"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-025",
+    "alert": {
+      "id": "INC-025",
+      "service": "checkout",
+      "at": "2026-10-25T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-025",
+        "at": "2026-10-25T11:58:00Z",
+        "message": "could not connect to postgres"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-025",
+        "service": "checkout",
+        "at": "2026-10-25T11:40:00Z"
+      }
+    ],
+    "expected_cause": "database_connection",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-026",
+    "alert": {
+      "id": "INC-026",
+      "service": "checkout",
+      "at": "2026-10-26T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-026",
+        "at": "2026-10-26T11:58:00Z",
+        "message": "upstream timed out"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-026",
+        "service": "checkout",
+        "at": "2026-10-26T11:40:00Z"
+      }
+    ],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-027",
+    "alert": {
+      "id": "INC-027",
+      "service": "checkout",
+      "at": "2026-10-27T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-027",
+        "at": "2026-10-27T11:57:00Z",
+        "message": "deadline exceeded"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-028",
+    "alert": {
+      "id": "INC-028",
+      "service": "checkout",
+      "at": "2026-10-28T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-028",
+        "at": "2026-10-28T11:56:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-029",
+    "alert": {
+      "id": "INC-029",
+      "service": "checkout",
+      "at": "2026-10-29T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-029",
+        "at": "2026-10-29T11:55:00Z",
+        "message": "gateway did not respond"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-030",
+    "alert": {
+      "id": "INC-030",
+      "service": "checkout",
+      "at": "2026-10-30T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-030",
+        "at": "2026-10-30T11:54:00Z",
+        "message": "slow upstream response"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-030",
+        "service": "checkout",
+        "at": "2026-10-30T11:40:00Z"
+      }
+    ],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-031",
+    "alert": {
+      "id": "INC-031",
+      "service": "checkout",
+      "at": "2026-10-31T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-031",
+        "at": "2026-10-31T11:53:00Z",
+        "message": "upstream timed out"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-032",
+    "alert": {
+      "id": "INC-032",
+      "service": "checkout",
+      "at": "2026-11-01T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-032",
+        "at": "2026-11-01T11:52:00Z",
+        "message": "deadline exceeded"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-033",
+    "alert": {
+      "id": "INC-033",
+      "service": "checkout",
+      "at": "2026-11-02T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-033",
+        "at": "2026-11-02T11:51:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-034",
+    "alert": {
+      "id": "INC-034",
+      "service": "checkout",
+      "at": "2026-11-03T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-034",
+        "at": "2026-11-03T11:50:00Z",
+        "message": "gateway did not respond"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-034",
+        "service": "checkout",
+        "at": "2026-11-03T11:40:00Z"
+      }
+    ],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-035",
+    "alert": {
+      "id": "INC-035",
+      "service": "checkout",
+      "at": "2026-11-04T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-035",
+        "at": "2026-11-04T11:49:00Z",
+        "message": "slow upstream response"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-036",
+    "alert": {
+      "id": "INC-036",
+      "service": "checkout",
+      "at": "2026-11-05T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-036",
+        "at": "2026-11-05T11:48:00Z",
+        "message": "upstream timed out"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-037",
+    "alert": {
+      "id": "INC-037",
+      "service": "checkout",
+      "at": "2026-11-06T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-037",
+        "at": "2026-11-06T11:47:00Z",
+        "message": "deadline exceeded"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-038",
+    "alert": {
+      "id": "INC-038",
+      "service": "checkout",
+      "at": "2026-11-07T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-038",
+        "at": "2026-11-07T11:58:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-038",
+        "service": "checkout",
+        "at": "2026-11-07T11:40:00Z"
+      }
+    ],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-039",
+    "alert": {
+      "id": "INC-039",
+      "service": "checkout",
+      "at": "2026-11-08T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-039",
+        "at": "2026-11-08T11:57:00Z",
+        "message": "gateway did not respond"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-040",
+    "alert": {
+      "id": "INC-040",
+      "service": "checkout",
+      "at": "2026-11-09T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-040",
+        "at": "2026-11-09T11:56:00Z",
+        "message": "slow upstream response"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-041",
+    "alert": {
+      "id": "INC-041",
+      "service": "checkout",
+      "at": "2026-11-10T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-041",
+        "at": "2026-11-10T11:55:00Z",
+        "message": "upstream timed out"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-042",
+    "alert": {
+      "id": "INC-042",
+      "service": "checkout",
+      "at": "2026-11-11T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-042",
+        "at": "2026-11-11T11:54:00Z",
+        "message": "deadline exceeded"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-042",
+        "service": "checkout",
+        "at": "2026-11-11T11:40:00Z"
+      }
+    ],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-043",
+    "alert": {
+      "id": "INC-043",
+      "service": "checkout",
+      "at": "2026-11-12T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-043",
+        "at": "2026-11-12T11:53:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-044",
+    "alert": {
+      "id": "INC-044",
+      "service": "checkout",
+      "at": "2026-11-13T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-044",
+        "at": "2026-11-13T11:52:00Z",
+        "message": "gateway did not respond"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-045",
+    "alert": {
+      "id": "INC-045",
+      "service": "checkout",
+      "at": "2026-11-14T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-045",
+        "at": "2026-11-14T11:51:00Z",
+        "message": "slow upstream response"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-046",
+    "alert": {
+      "id": "INC-046",
+      "service": "checkout",
+      "at": "2026-11-15T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-046",
+        "at": "2026-11-15T11:50:00Z",
+        "message": "upstream timed out"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-046",
+        "service": "checkout",
+        "at": "2026-11-15T11:40:00Z"
+      }
+    ],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-047",
+    "alert": {
+      "id": "INC-047",
+      "service": "checkout",
+      "at": "2026-11-16T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-047",
+        "at": "2026-11-16T11:49:00Z",
+        "message": "deadline exceeded"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-048",
+    "alert": {
+      "id": "INC-048",
+      "service": "checkout",
+      "at": "2026-11-17T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-048",
+        "at": "2026-11-17T11:48:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-049",
+    "alert": {
+      "id": "INC-049",
+      "service": "checkout",
+      "at": "2026-11-18T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-049",
+        "at": "2026-11-18T11:47:00Z",
+        "message": "gateway did not respond"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-050",
+    "alert": {
+      "id": "INC-050",
+      "service": "checkout",
+      "at": "2026-11-19T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-050",
+        "at": "2026-11-19T11:58:00Z",
+        "message": "slow upstream response"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-050",
+        "service": "checkout",
+        "at": "2026-11-19T11:40:00Z"
+      }
+    ],
+    "expected_cause": "request_timeout",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-051",
+    "alert": {
+      "id": "INC-051",
+      "service": "checkout",
+      "at": "2026-11-20T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-051",
+        "at": "2026-11-20T11:58:00Z",
+        "message": "secret not found"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-051",
+        "service": "checkout",
+        "at": "2026-11-20T11:40:00Z"
+      }
+    ],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-052",
+    "alert": {
+      "id": "INC-052",
+      "service": "checkout",
+      "at": "2026-11-21T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-052",
+        "at": "2026-11-21T11:57:00Z",
+        "message": "invalid configuration"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-053",
+    "alert": {
+      "id": "INC-053",
+      "service": "checkout",
+      "at": "2026-11-22T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-053",
+        "at": "2026-11-22T11:56:00Z",
+        "message": "missing environment variable"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-054",
+    "alert": {
+      "id": "INC-054",
+      "service": "checkout",
+      "at": "2026-11-23T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-054",
+        "at": "2026-11-23T11:55:00Z",
+        "message": "bad runtime setting"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-055",
+    "alert": {
+      "id": "INC-055",
+      "service": "checkout",
+      "at": "2026-11-24T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-055",
+        "at": "2026-11-24T11:54:00Z",
+        "message": "missing API credential"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-055",
+        "service": "checkout",
+        "at": "2026-11-24T11:40:00Z"
+      }
+    ],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-056",
+    "alert": {
+      "id": "INC-056",
+      "service": "checkout",
+      "at": "2026-11-25T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-056",
+        "at": "2026-11-25T11:53:00Z",
+        "message": "secret not found"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-057",
+    "alert": {
+      "id": "INC-057",
+      "service": "checkout",
+      "at": "2026-11-26T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-057",
+        "at": "2026-11-26T11:52:00Z",
+        "message": "invalid configuration"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-058",
+    "alert": {
+      "id": "INC-058",
+      "service": "checkout",
+      "at": "2026-11-27T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-058",
+        "at": "2026-11-27T11:51:00Z",
+        "message": "missing environment variable"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-059",
+    "alert": {
+      "id": "INC-059",
+      "service": "checkout",
+      "at": "2026-11-28T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-059",
+        "at": "2026-11-28T11:50:00Z",
+        "message": "bad runtime setting"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-059",
+        "service": "checkout",
+        "at": "2026-11-28T11:40:00Z"
+      }
+    ],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-060",
+    "alert": {
+      "id": "INC-060",
+      "service": "checkout",
+      "at": "2026-11-29T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-060",
+        "at": "2026-11-29T11:49:00Z",
+        "message": "missing API credential"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-061",
+    "alert": {
+      "id": "INC-061",
+      "service": "checkout",
+      "at": "2026-11-30T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-061",
+        "at": "2026-11-30T11:48:00Z",
+        "message": "secret not found"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-062",
+    "alert": {
+      "id": "INC-062",
+      "service": "checkout",
+      "at": "2026-12-01T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-062",
+        "at": "2026-12-01T11:47:00Z",
+        "message": "invalid configuration"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-063",
+    "alert": {
+      "id": "INC-063",
+      "service": "checkout",
+      "at": "2026-12-02T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-063",
+        "at": "2026-12-02T11:58:00Z",
+        "message": "missing environment variable"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-063",
+        "service": "checkout",
+        "at": "2026-12-02T11:40:00Z"
+      }
+    ],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-064",
+    "alert": {
+      "id": "INC-064",
+      "service": "checkout",
+      "at": "2026-12-03T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-064",
+        "at": "2026-12-03T11:57:00Z",
+        "message": "bad runtime setting"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-065",
+    "alert": {
+      "id": "INC-065",
+      "service": "checkout",
+      "at": "2026-12-04T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-065",
+        "at": "2026-12-04T11:56:00Z",
+        "message": "missing API credential"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-066",
+    "alert": {
+      "id": "INC-066",
+      "service": "checkout",
+      "at": "2026-12-05T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-066",
+        "at": "2026-12-05T11:55:00Z",
+        "message": "secret not found"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-067",
+    "alert": {
+      "id": "INC-067",
+      "service": "checkout",
+      "at": "2026-12-06T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-067",
+        "at": "2026-12-06T11:54:00Z",
+        "message": "invalid configuration"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-067",
+        "service": "checkout",
+        "at": "2026-12-06T11:40:00Z"
+      }
+    ],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-068",
+    "alert": {
+      "id": "INC-068",
+      "service": "checkout",
+      "at": "2026-12-07T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-068",
+        "at": "2026-12-07T11:53:00Z",
+        "message": "missing environment variable"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-069",
+    "alert": {
+      "id": "INC-069",
+      "service": "checkout",
+      "at": "2026-12-08T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-069",
+        "at": "2026-12-08T11:52:00Z",
+        "message": "bad runtime setting"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-070",
+    "alert": {
+      "id": "INC-070",
+      "service": "checkout",
+      "at": "2026-12-09T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-070",
+        "at": "2026-12-09T11:51:00Z",
+        "message": "missing API credential"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-071",
+    "alert": {
+      "id": "INC-071",
+      "service": "checkout",
+      "at": "2026-12-10T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-071",
+        "at": "2026-12-10T11:50:00Z",
+        "message": "secret not found"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-071",
+        "service": "checkout",
+        "at": "2026-12-10T11:40:00Z"
+      }
+    ],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-072",
+    "alert": {
+      "id": "INC-072",
+      "service": "checkout",
+      "at": "2026-12-11T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-072",
+        "at": "2026-12-11T11:49:00Z",
+        "message": "invalid configuration"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-073",
+    "alert": {
+      "id": "INC-073",
+      "service": "checkout",
+      "at": "2026-12-12T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-073",
+        "at": "2026-12-12T11:48:00Z",
+        "message": "missing environment variable"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-074",
+    "alert": {
+      "id": "INC-074",
+      "service": "checkout",
+      "at": "2026-12-13T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-074",
+        "at": "2026-12-13T11:47:00Z",
+        "message": "bad runtime setting"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-075",
+    "alert": {
+      "id": "INC-075",
+      "service": "checkout",
+      "at": "2026-12-14T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "L-075",
+        "at": "2026-12-14T11:58:00Z",
+        "message": "missing API credential"
+      }
+    ],
+    "deployments": [
+      {
+        "id": "D-075",
+        "service": "checkout",
+        "at": "2026-12-14T11:40:00Z"
+      }
+    ],
+    "expected_cause": "configuration",
+    "label_note": "Synthetic cause assigned from scenario design; not a real incident adjudication."
+  },
+  {
+    "id": "INC-076",
+    "alert": {
+      "id": "INC-076",
+      "service": "checkout",
+      "at": "2026-12-15T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-0",
+        "at": "2026-12-15T10:00:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-077",
+    "alert": {
+      "id": "INC-077",
+      "service": "checkout",
+      "at": "2026-12-16T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-1",
+        "at": "2026-12-16T12:05:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-078",
+    "alert": {
+      "id": "INC-078",
+      "service": "checkout",
+      "at": "2026-12-17T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-2",
+        "at": "2026-12-17T11:55:00Z",
+        "message": "routine heartbeat successful"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-079",
+    "alert": {
+      "id": "INC-079",
+      "service": "checkout",
+      "at": "2026-12-18T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-3",
+        "service": "billing",
+        "at": "2026-12-18T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-080",
+    "alert": {
+      "id": "INC-080",
+      "service": "checkout",
+      "at": "2026-12-19T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-4",
+        "service": "checkout",
+        "at": "2026-12-19T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-081",
+    "alert": {
+      "id": "INC-081",
+      "service": "checkout",
+      "at": "2026-12-20T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-5",
+        "at": "2026-12-20T10:00:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-082",
+    "alert": {
+      "id": "INC-082",
+      "service": "checkout",
+      "at": "2026-12-21T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-6",
+        "at": "2026-12-21T12:05:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-083",
+    "alert": {
+      "id": "INC-083",
+      "service": "checkout",
+      "at": "2026-12-22T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-7",
+        "at": "2026-12-22T11:55:00Z",
+        "message": "routine heartbeat successful"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-084",
+    "alert": {
+      "id": "INC-084",
+      "service": "checkout",
+      "at": "2026-12-23T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-8",
+        "service": "billing",
+        "at": "2026-12-23T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-085",
+    "alert": {
+      "id": "INC-085",
+      "service": "checkout",
+      "at": "2026-12-24T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-9",
+        "service": "checkout",
+        "at": "2026-12-24T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-086",
+    "alert": {
+      "id": "INC-086",
+      "service": "checkout",
+      "at": "2026-12-25T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-10",
+        "at": "2026-12-25T10:00:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-087",
+    "alert": {
+      "id": "INC-087",
+      "service": "checkout",
+      "at": "2026-12-26T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-11",
+        "at": "2026-12-26T12:05:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-088",
+    "alert": {
+      "id": "INC-088",
+      "service": "checkout",
+      "at": "2026-12-27T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-12",
+        "at": "2026-12-27T11:55:00Z",
+        "message": "routine heartbeat successful"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-089",
+    "alert": {
+      "id": "INC-089",
+      "service": "checkout",
+      "at": "2026-12-28T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-13",
+        "service": "billing",
+        "at": "2026-12-28T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-090",
+    "alert": {
+      "id": "INC-090",
+      "service": "checkout",
+      "at": "2026-12-29T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-14",
+        "service": "checkout",
+        "at": "2026-12-29T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-091",
+    "alert": {
+      "id": "INC-091",
+      "service": "checkout",
+      "at": "2026-12-30T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-15",
+        "at": "2026-12-30T10:00:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-092",
+    "alert": {
+      "id": "INC-092",
+      "service": "checkout",
+      "at": "2026-12-31T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-16",
+        "at": "2026-12-31T12:05:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-093",
+    "alert": {
+      "id": "INC-093",
+      "service": "checkout",
+      "at": "2027-01-01T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-17",
+        "at": "2027-01-01T11:55:00Z",
+        "message": "routine heartbeat successful"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-094",
+    "alert": {
+      "id": "INC-094",
+      "service": "checkout",
+      "at": "2027-01-02T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-18",
+        "service": "billing",
+        "at": "2027-01-02T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-095",
+    "alert": {
+      "id": "INC-095",
+      "service": "checkout",
+      "at": "2027-01-03T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-19",
+        "service": "checkout",
+        "at": "2027-01-03T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-096",
+    "alert": {
+      "id": "INC-096",
+      "service": "checkout",
+      "at": "2027-01-04T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-20",
+        "at": "2027-01-04T10:00:00Z",
+        "message": "connection refused"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-097",
+    "alert": {
+      "id": "INC-097",
+      "service": "checkout",
+      "at": "2027-01-05T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-21",
+        "at": "2027-01-05T12:05:00Z",
+        "message": "request timeout"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-098",
+    "alert": {
+      "id": "INC-098",
+      "service": "checkout",
+      "at": "2027-01-06T12:00:00Z"
+    },
+    "logs": [
+      {
+        "id": "N-22",
+        "at": "2027-01-06T11:55:00Z",
+        "message": "routine heartbeat successful"
+      }
+    ],
+    "deployments": [],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-099",
+    "alert": {
+      "id": "INC-099",
+      "service": "checkout",
+      "at": "2027-01-07T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-23",
+        "service": "billing",
+        "at": "2027-01-07T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  },
+  {
+    "id": "INC-100",
+    "alert": {
+      "id": "INC-100",
+      "service": "checkout",
+      "at": "2027-01-08T12:00:00Z"
+    },
+    "logs": [],
+    "deployments": [
+      {
+        "id": "DN-24",
+        "service": "checkout",
+        "at": "2027-01-08T11:45:00Z"
+      }
+    ],
+    "expected_cause": null,
+    "label_note": "No supported cause in the synthetic alert window."
+  }
+]
