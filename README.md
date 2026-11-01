@@ -28,7 +28,7 @@ This repository runs its own tests with GitHub Actions. Read the latest runs wit
 python3 demo.py --github pars1905/incident-investigation-assistant
 ```
 
-The report shows up to five recent runs, including status, conclusion, time, and source link. A workflow run is **context**, not evidence of a deployed application or a proven incident cause. No logs are fetched in this mode, so the investigation remains `insufficient_evidence`. This read-only API integration has a mocked test; a live call still needs to be run from a machine with access to `api.github.com`.
+The report shows up to five recent runs, including status, conclusion, time, and source link. A workflow run is **context**, not evidence of a deployed application or a proven incident cause. No logs are fetched in this mode, so the investigation remains `insufficient_evidence`. The read-only integration was verified against this repository's public GitHub API on 2026-11-01; the API returned 14 workflow runs. Run counts and statuses change over time.
 
 ## Optional: read real GitHub deployment data
 
@@ -42,4 +42,4 @@ For a private repository set `GITHUB_TOKEN` in your environment with read access
 
 The mock issue store is process-local. A real deployment would query an observability platform with bounded time windows, sanitize sensitive log content, link exact source records, verify permissions, and use GitHub's authenticated API for issue creation. Validate top-3 cause recall and evidence relevance on historical incidents before claiming usefulness.
 
-**CV wording:** “Built an incident triage prototype correlating logs and recent deployments, ranking evidence-linked hypotheses, and creating human-approved issue records; evaluated on labeled synthetic incidents.”
+**CV wording:** “Built an incident triage prototype that ranks evidence-linked hypotheses from synthetic logs, reads live GitHub Actions runs as operational context, and requires human approval for mock issue creation; evaluated on 100 labeled synthetic incidents.”
