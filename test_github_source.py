@@ -1,0 +1,41 @@
+import io
+import json
+import os
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+from github_source import get_deployments
+from evaluate import evaluate
+
+
+class FakeResponse(io.BytesIO):
+    pass
+
+
+class GitHubSourceTests(unittest.TestCase):
+    def test_maps_real_api_shape_without_posting(self):
+        def opener(request, timeout):
+            self.assertEqual(request.full_url,
+                             "https://api.github.com/repos/pars1905/demo/deployments?per_page=100")
+            self.assertEqual(timeout, 10)
+            self.assertEqual(request.get_method(), "GET")
+            return FakeResponse(json.dumps([{
+                "id": 123, "created_at": "2026-11-01T09:00:00Z"}]).encode())
+        with patch.dict(os.environ, {"GITHUB_TOKEN": ""}):
+            results = get_deployments("pars1905", "demo", "checkout", opener)
+        self.assertEqual(results[0]["id"], "123")
+        self.assertEqual(results[0]["service"], "checkout")
+
+    def test_invalid_repo_rejected_before_network(self):
+        with self.assertRaises(ValueError):
+            get_deployments("pars1905", "../another", "checkout")
+
+    def test_benchmark_has_100_balanced_cases(self):
+        data = json.loads((Path(__file__).parent / "data" / "incidents_100.json").read_text())
+        result = evaluate(data)
+        self.assertEqual(result["examples"], 100)
+        self.assertEqual({x["total"] for x in result["by_class"].values()}, {25})
+
+
+if __name__ == "__main__":
+    unittest.main()
