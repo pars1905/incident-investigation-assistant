@@ -1,6 +1,6 @@
 # Incident Investigation Assistant
 
-An interview-ready Python prototype for investigating service incidents. It correlates logs with recent GitHub deployment metadata, ranks evidence-linked hypotheses, and requires explicit approval before creating a mock issue. It has no third-party Python dependencies.
+An interview-ready Python prototype for investigating service incidents. It correlates synthetic logs with recent deployment metadata, ranks evidence-linked hypotheses, and requires explicit approval before creating a mock issue. It can also read real GitHub Actions runs as operational context. It has no third-party Python dependencies.
 
 **Scenario:** A developer receives an alert, logs, and recent deployment metadata. The assistant ranks possible causes, attaches a source reference for each observation, suggests the next check, and creates a mock GitHub issue only after developer approval.
 
@@ -20,15 +20,25 @@ To try a model-written reviewer explanation, set `OPENAI_API_KEY` and `OPENAI_MO
 
 `data/incidents_100.json` contains 25 generated synthetic examples for each of three causes and 25 cases without sufficient evidence. The labels come from the scenario templates, not independently adjudicated production incidents; many examples reuse phrase templates. This set is useful for exposing known gaps but cannot establish real-world accuracy. Run `python3 evaluate.py`. Current results: 15/25 detected in each of the three cause groups, 25/25 correct abstentions, and 100/100 source references pointing to supplied records. The ten missed cases per cause use wording outside the narrow rule vocabulary. Do not report these figures as production performance.
 
-## Read real GitHub deployment data
+## Read real GitHub Actions data
+
+This repository runs its own tests with GitHub Actions. Read the latest runs without an API key:
+
+```bash
+python3 demo.py --github pars1905/incident-investigation-assistant
+```
+
+The report shows up to five recent runs, including status, conclusion, time, and source link. A workflow run is **context**, not evidence of a deployed application or a proven incident cause. No logs are fetched in this mode, so the investigation remains `insufficient_evidence`. This read-only API integration has a mocked test; a live call still needs to be run from a machine with access to `api.github.com`.
+
+## Optional: read real GitHub deployment data
 
 Choose a GitHub repository that actually creates GitHub **deployment records**, then run:
 
 ```bash
-python3 demo.py --github OWNER/REPO --service checkout
+python3 demo.py --github OWNER/REPO --deployments --service checkout
 ```
 
-For a private repository set `GITHUB_TOKEN` in your environment with read access to deployments. Do not commit it. The command reads up to 100 deployment records, uses the current time as the alert time, and makes **no write request**. It does not fetch logs, so a deployment alone correctly yields `insufficient_evidence`. The `--service` value is an operator-supplied mapping of the repository to the application service. A GitHub deployment record alone cannot prove that mapping or establish a root cause. The integration is covered by mocked API tests; no live repository call has been verified yet. An empty result is normal when the chosen repository does not use GitHub Deployments.
+For a private repository set `GITHUB_TOKEN` in your environment with read access to the relevant API. Do not commit it. The deployment command reads up to 100 deployment records, uses the current time as the alert time, and makes **no write request**. It does not fetch logs, so a deployment alone correctly yields `insufficient_evidence`. The `--service` value is an operator-supplied mapping of the repository to the application service. A GitHub deployment record alone cannot prove that mapping or establish a root cause. The integration is covered by mocked API tests; no live repository call has been verified yet. An empty result is normal when the chosen repository does not use GitHub Deployments.
 
 The mock issue store is process-local. A real deployment would query an observability platform with bounded time windows, sanitize sensitive log content, link exact source records, verify permissions, and use GitHub's authenticated API for issue creation. Validate top-3 cause recall and evidence relevance on historical incidents before claiming usefulness.
 
