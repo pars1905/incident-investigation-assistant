@@ -13,3 +13,5 @@ jobs:
       - run: python3 -m unittest discover -v
       - run: python3 evaluate.py
       - run: docker build -t incident-assistant .
+      - run: docker run --rm incident-assistant
+      - run: docker run --rm incident-assistant python evaluate.py
