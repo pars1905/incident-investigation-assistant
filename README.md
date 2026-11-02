@@ -12,6 +12,21 @@ python3 evaluate.py
 python3 -m unittest discover -v
 ```
 
+## Isolated environment
+
+To run in your browser, open the repository on GitHub, select **Code → Codespaces → Create codespace on main**, then run `python3 demo.py` in the terminal. The included `.devcontainer/devcontainer.json` selects Python 3.12. Each repository gets its own separate codespace.
+
+With Docker installed locally, run:
+
+```bash
+docker build -t incident-assistant .
+docker run --rm incident-assistant
+docker run --rm incident-assistant python evaluate.py
+docker run --rm incident-assistant python -m unittest discover -v
+```
+
+For the live GitHub Actions read, use `docker run --rm incident-assistant python demo.py --github pars1905/incident-investigation-assistant`. No API key is needed for this public repository. Codespaces and Docker run the CLI demo in isolated containers; they do not publish a web service.
+
 Local fixtures are synthetic. No credentials or packages are needed. Findings are **hypotheses**, not proven root causes; the score prioritizes investigation rather than asserting causality. A weak signal returns an `insufficient_evidence` result. The demo's mock issue is stored only in memory.
 
 To try a model-written reviewer explanation, set `OPENAI_API_KEY` and `OPENAI_MODEL` in your shell and run `python3 demo.py --ai`. The model receives structured findings and cannot authorize or create an issue. This optional API integration is covered by a mocked test but has not been verified with a live model. API usage may incur charges.
