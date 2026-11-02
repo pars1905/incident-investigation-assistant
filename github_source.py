@@ -6,7 +6,7 @@ import urllib.error
 import urllib.request
 
 
-SLUG = re.compile(r"^[A-Za-z0-9_.-]+$")
+SLUG = re.compile(r"^(?!\.+$)[A-Za-z0-9_.-]+$")
 
 
 def get_deployments(owner, repo, service, opener=None):
@@ -30,6 +30,8 @@ def get_deployments(owner, repo, service, opener=None):
             records = json.load(response)
     except urllib.error.HTTPError as error:
         raise RuntimeError(f"GitHub API returned HTTP {error.code}") from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(f"Could not reach GitHub API: {error.reason}") from error
     if not isinstance(records, list):
         raise ValueError("Unexpected GitHub deployment response")
     return [{"id": str(record["id"]), "service": service, "at": record["created_at"],
@@ -51,6 +53,8 @@ def get_workflow_runs(owner, repo, opener=None):
             result = json.load(response)
     except urllib.error.HTTPError as error:
         raise RuntimeError(f"GitHub API returned HTTP {error.code}") from error
+    except urllib.error.URLError as error:
+        raise RuntimeError(f"Could not reach GitHub API: {error.reason}") from error
     records = result.get("workflow_runs") if isinstance(result, dict) else None
     if not isinstance(records, list):
         raise ValueError("Unexpected GitHub workflow response")

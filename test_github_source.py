@@ -2,6 +2,7 @@ import io
 import json
 import os
 import unittest
+import urllib.error
 from pathlib import Path
 from unittest.mock import patch
 from github_source import get_deployments, get_workflow_runs
@@ -49,6 +50,20 @@ class GitHubSourceTests(unittest.TestCase):
         result = evaluate(data)
         self.assertEqual(result["examples"], 100)
         self.assertEqual({x["total"] for x in result["by_class"].values()}, {25})
+
+    def test_dot_segments_rejected_before_network(self):
+        for owner in (".", ".."):
+            with self.subTest(owner=owner):
+                with self.assertRaises(ValueError):
+                    get_workflow_runs(owner, "demo")
+
+    def test_network_failure_is_reported_as_runtime_error(self):
+        def opener(request, timeout):
+            raise urllib.error.URLError("dns failure")
+        for call in (lambda: get_deployments("o", "r", "checkout", opener),
+                     lambda: get_workflow_runs("o", "r", opener)):
+            with self.assertRaises(RuntimeError):
+                call()
 
 
 if __name__ == "__main__":

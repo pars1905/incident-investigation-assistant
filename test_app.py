@@ -29,6 +29,15 @@ class IncidentTests(unittest.TestCase):
         create_issue(report, True, issues)
         self.assertEqual(create_issue(report, True, issues)["status"], "already_open")
 
+    def test_only_boolean_true_counts_as_approval(self):
+        report = investigate(ALERT, LOGS, DEPLOYS)
+        issues = {}
+        for value in ("false", "no", 1):
+            with self.subTest(value=value):
+                with self.assertRaises(PermissionError):
+                    create_issue(report, value, issues)
+        self.assertFalse(issues)
+
 
 if __name__ == "__main__":
     unittest.main()

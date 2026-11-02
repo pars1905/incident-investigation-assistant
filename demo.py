@@ -18,6 +18,8 @@ if __name__ == "__main__":
     parser.add_argument("--service", default="checkout", help="Service represented by that repository")
     parser.add_argument("--ai", action="store_true", help="Optional model-written explanation")
     args = parser.parse_args()
+    if args.deployments and not args.github:
+        parser.error("--deployments requires --github OWNER/REPO")
     if args.github:
         try:
             owner, repo = args.github.split("/")

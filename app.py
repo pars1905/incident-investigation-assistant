@@ -62,9 +62,9 @@ def investigate(alert, logs, deployments):
 
 
 def create_issue(report, approved, issues):
-    if not approved:
+    if approved is not True:
         raise PermissionError("Developer approval required")
-    if report["status"] == "insufficient_evidence":
+    if report["status"] != "hypotheses":
         raise ValueError("Investigate further before opening a cause-specific issue")
     alert_id = report["alert_id"]
     if alert_id in issues:
